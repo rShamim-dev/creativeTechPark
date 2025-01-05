@@ -32,7 +32,7 @@
 
         <!-- Mobile navbar -->
         <nav id="mobile-nav"
-            class="side-menu flex flex-col right-0 w-64 fixed top-0 bg-white dark:bg-gray-800 h-full overflow-auto z-40">
+            class="side-menu flex flex-col right-0 w-64 fixed top-0 bg-white h-full overflow-auto z-40">
             <x-frontend.mobile-menu></x-frontend.mobile-menu>
         </nav>
     </div>
@@ -50,7 +50,7 @@
     </footer>
 
     <a href="#"
-        class="back-top fixed p-4 rounded bg-gray-10 border border-gray-100 text-gray-500 dark:bg-gray-900 dark:border-gray-800 right-4 bottom-4 hidden"
+        class="back-top fixed p-4 rounded bg-gray-10 border border-gray-100 text-gray-500 right-4 bottom-4 hidden"
         aria-label="Scroll To Top">
         <i class="fa-solid fa-arrow-up-9-1"></i>
     </a>

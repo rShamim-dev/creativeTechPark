@@ -14,9 +14,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('categories', CategoryController::class);
-Route::resource('products', ProductController::class);
+Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::resource('categories', CategoryController::class);
+    Route::resource('products', ProductController::class);
+});
 
-// Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
-//     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
-// });
+
+require __DIR__ . '/auth.php';
