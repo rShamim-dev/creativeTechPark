@@ -16,7 +16,7 @@
             </div>
             <div class="ms-auto">
                 <div class="btn-group">
-                    <a href="{{ route('product.index') }}">
+                    <a href="{{ route('products.index') }}">
                         <button type="button" class="btn btn-outline-primary">Product</button>
                     </a>
                 </div>
@@ -37,7 +37,8 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="categories" class="form-label">Select Category</label>
-                                <select name="categories[]" id="categories" class="form-control">
+                                {{-- <select name="categories[]" id="categories" class="form-control"> --}}
+                                    <select class="form-select" name="categories[]" id="multiple-select-clear-field" data-placeholder="Select Category" multiple>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach

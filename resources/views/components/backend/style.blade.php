@@ -5,7 +5,7 @@
     <script src="{{ asset('backend/assets/js/pace.min.js') }}"></script>
 
     <!--plugins-->
-    <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <link href="{{ asset('backend/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/plugins/metismenu/metisMenu.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/plugins/metismenu/mm-vertical.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/plugins/simplebar/css/simplebar.css') }}">
@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&amp;display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+    
+  <link rel="stylesheet" href="{{ asset('backend/cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('backend/cdn.jsdelivr.net/npm/select2-bootstrap-5-theme%401.3.0/dist/select2-bootstrap-5-theme.min.css') }}">
     <!--main css-->
     <link href="{{ asset('backend/assets/css/bootstrap-extended.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/sass/main.css') }}" rel="stylesheet">
@@ -27,3 +30,4 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </div>
+ 

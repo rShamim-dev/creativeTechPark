@@ -3,7 +3,7 @@
 1. Clone Repository
 
 ```bash
-    git clone git remote add origin https://github.com/rShamim-dev/creativeTechPark.git && cd creativeTechPark
+    git clone https://github.com/rShamim-dev/creativeTechPark.git && cd creativeTechPark
 ```
 
 2. Composer Update
@@ -19,25 +19,25 @@
     npm run dev
 ```
 
-4. Copy Env file
+<!-- 4. Copy Env file
 
 ```bash
     cp .env.example .env
-```
+``` -->
 
-5. Key Generate
+4. Key Generate
 
 ```bash
     php artisan key:generate
 ```
 
-6. Database create and update .env file then run command
+5. Database create and update .env file then run command
 
 ```bash
-    php artisan migrate:fresh --seed
+    php artisan migrate --seed
 ```
 
-7. Dashboard access creadentials
+6. Dashboard access creadentials
 
 ```bash
     email: admin@gmail.com

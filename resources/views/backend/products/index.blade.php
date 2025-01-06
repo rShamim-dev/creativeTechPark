@@ -68,6 +68,15 @@
                                             </td>
                                             <td>
                                                 <div class="d-flex align-items-center gap-1">
+                                                    <button type="button" class="btn btn-outline-primary px-4 view-product"
+                                                        data-bs-toggle="modal" data-bs-target="#product-show"
+                                                        data-title="{{ $data->name }}"
+                                                        data-price="{{ $data->price }}"
+                                                        data-status="{{ $data->status }}"
+                                                        data-img="{{ $data->getFirstMediaUrl('images', 'thumb') }}">
+                                                        <i class="fa-solid fa-eye"></i>
+                                                    </button>
+
                                                     <a href="{{ route('products.edit', $data->id) }}">
                                                         <button class="btn btn-outline-info">
                                                             <i class="fa-solid fa-pen-to-square"></i>
@@ -94,4 +103,54 @@
             </div>
         </div>
     </div>
+
+
+    {{-- Modal --}}
+    <div class="modal fade" id="product-show">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0 py-2">
+                    <h5 class="modal-title" id="product-title">Modal title</h5>
+                    <a href="javascript:;" class="primaery-menu-close" data-bs-dismiss="modal">
+                        <i class="material-icons-outlined">close</i>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <img id="product-img" src="" alt="Product Image" class="img-fluid mb-3" />
+                    <p id="product-status"></p>
+                    <p id="product-price">Price: </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @push('script')
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.view-product').forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        // Get product details from data attributes
+                        const title = button.getAttribute('data-title');
+                        const price = button.getAttribute('data-price');
+                        const status = button.getAttribute('data-status');
+                        const productImg = button.getAttribute('data-img');
+
+                        // Update modal content
+                        document.getElementById('product-title').textContent = title;
+                        document.getElementById('product-status').textContent = status == 1 ?
+                            'Published' : 'Unpublished';
+                        document.getElementById('product-price').textContent = `Price: ${price}`;
+
+                        // Update the image source
+                        const imgElement = document.getElementById('product-img');
+                        imgElement.src = productImg;
+
+                        // Add an alt attribute fallback in case the image doesn't load
+                        imgElement.alt = title || 'Product Image';
+                    });
+                });
+            });
+        </script>
+    @endpush
+
 </x-layout.backend-master>>

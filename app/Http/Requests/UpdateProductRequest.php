@@ -24,7 +24,7 @@ class UpdateProductRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'price' => 'required|numeric|min:0',
-            'slug' => 'required|string|max:255|unique:products,slug',
+            'slug' => 'required|string|max:255|unique:products,slug,' . $this->product->id,
             'categories' => 'required|array',
             'categories.*' => 'exists:categories,id',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',

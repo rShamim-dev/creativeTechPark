@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CodeUniters - {{ $title ?? 'Home' }}</title>
+    <title>Creative Tech Park - {{ $title ?? 'Home' }}</title>
     <!--favicon-->
     <x-backend.style></x-backend.style>
 </head>

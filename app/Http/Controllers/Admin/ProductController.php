@@ -100,4 +100,11 @@ class ProductController extends Controller
 
         return redirect()->route('products.index')->withSuccess('Product deleted successfully!');
     }
+
+
+    public function getProduct()
+    {
+        $products = Product::active()->get();
+        return response()->json($products);
+    }
 }

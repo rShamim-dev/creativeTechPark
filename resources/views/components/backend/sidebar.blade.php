@@ -27,82 +27,26 @@
             <li>
 
                 <a href="javascript:;" class="has-arrow">
-                    <div class="parent-icon"><i class="fa-solid fa-users"></i>
+                    <div class="parent-icon"><i class="fa-brands fa-product-hunt"></i>
                     </div>
-                    <div class="menu-title">Users</div>
+                    <div class="menu-title">Product Manage</div>
                 </a>
                 <ul>
-                    @can('users.index')
                         <li>
-                            <a href="{{ route('users.index') }}">
+                            <a href="{{ route('categories.index') }}">
                                 <i class="material-icons-outlined">arrow_right</i>
-                                Users
+                                Categories
                             </a>
                         </li>
-                    @endcan
-                    @can('role.index')
                         <li>
-                            <a href="{{ route('users.role') }}">
+                            <a href="{{ route('products.index') }}">
                                 <i class="material-icons-outlined">arrow_right</i>
-                                Roles
+                                products
                             </a>
                         </li>
-                    @endcan
                 </ul>
             </li>
 
-            <!--  Pages Manage-->
-            @can('pages.index')
-                <li>
-                    <a href="javascript:;" class="has-arrow">
-                        <div class="parent-icon"><i class="fa-brands fa-space-awesome"></i>
-                        </div>
-                        <div class="menu-title">Content</div>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="{{ route('pages.index') }}">
-                                <i class="material-icons-outlined">arrow_right</i>
-                                Pages
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            @endcan
-
-            <li>
-                <a href="javascript:;" class="has-arrow">
-                    <div class="parent-icon"><i class="fa-solid fa-sliders"></i>
-                    </div>
-                    <div class="menu-title">Settings</div>
-                </a>
-                <ul>
-                    @can('site.settings')
-                        <li>
-                            <a href="{{ route('site.settings') }}">
-                                <i class="material-icons-outlined">arrow_right</i>
-                                Site Settings
-                            </a>
-                        </li>
-                    @endcan
-                    @can('seo.settings')
-                        <li>
-                            <a href="{{ route('seo.settings') }}">
-                                <i class="material-icons-outlined">arrow_right</i>
-                                Seo Settings
-                            </a>
-                        </li>
-                    @endcan
-                    @can('social.settings')
-                        <li>
-                            <a href="{{ route('social.settings') }}">
-                                <i class="material-icons-outlined">arrow_right</i>
-                                Social Settings
-                            </a>
-                        </li>
-                    @endcan
-                </ul>
-            </li>
         </ul>
         <!--end navigation-->
     </div>

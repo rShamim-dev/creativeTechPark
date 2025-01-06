@@ -5,6 +5,10 @@
 
     <!--plugins-->
     <script src="{{ asset('backend/assets/js/jquery.min.js') }}"></script>
+
+    
+  <script src="{{ asset('backend/cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js')}}"></script>
+  <script src="{{ asset('backend/assets/plugins/select2/js/select2-custom.js')}}"></script>
     <!--plugins-->
     <script src="{{ asset('backend/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
     <script src="{{ asset('backend/assets/plugins/metismenu/metisMenu.min.js') }}"></script>
@@ -24,4 +28,4 @@
     <script>
         new PerfectScrollbar(".user-list")
     </script>
-</div>
+</div> 

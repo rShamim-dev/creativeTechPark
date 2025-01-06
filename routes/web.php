@@ -20,5 +20,6 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
     Route::resource('products', ProductController::class);
 });
 
+Route::get('get-product', [ProductController::class, 'getProduct']);
 
 require __DIR__ . '/auth.php';
