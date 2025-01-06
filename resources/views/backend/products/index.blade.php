@@ -42,6 +42,7 @@
                                         <th>Name</th>
                                         <th>Price</th>
                                         <th>Status</th>
+                                        <th>Category</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -56,6 +57,11 @@
                                                     src="{{ $data->getFirstMediaUrl('images') }}" alt="">
                                             </td>
                                             <td>
+                                                @foreach ( $data->categories as  $category )
+                                                <span class="me-1">{{ $category->name }}</span>@if(!$loop->last), @endif
+                                                @endforeach
+                                            </td>
+                                            <td>
                                                 @if ($data->status == App\Enum\StatusType::ACTIVE)
                                                     <p
                                                         class="dash-lable mb-0 bg-success bg-opacity-10 text-success rounded-2">
@@ -68,7 +74,7 @@
                                             </td>
                                             <td>
                                                 <div class="d-flex align-items-center gap-1">
-                                                    <button type="button" class="btn btn-outline-primary px-4 view-product"
+                                                    <button type="button" class="btn btn-outline-primary  view-product"
                                                         data-bs-toggle="modal" data-bs-target="#product-show"
                                                         data-title="{{ $data->name }}"
                                                         data-price="{{ $data->price }}"
