@@ -43,3 +43,9 @@
     email: admin@gmail.com
     pass: 123456
 ```
+
+7. Storage Link
+
+```bash
+    php artisan storage:link
+```
